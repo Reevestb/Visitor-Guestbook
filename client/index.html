@@ -7,7 +7,22 @@
     <title>Visitor Guestbook</title>
   </head>
   <body>
-    <div id="app"></div>
+    <body>
+      <div id="signIn">
+        <form id="visitorSign">
+          <label for="Name">Name: </label>
+          <input type="text" name="Name" id="Name" required />
+          <label for="Location">Location: </label>
+          <input type="text" name="Location" id="Location" required />
+          <label for="dateVisiting">Date Visiting: </label>
+          <input type="text" name="dateVisiting" id="dateVisiting" required />
+          <label for="Messages">Messages: </label>
+          <input type="text" name="Messages" id="Messages" required />
+          <input type="submit" value="submit" />
+        </form>
+        <div id=""></div>
+        <div id="leftMessages"></div>
+      </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
