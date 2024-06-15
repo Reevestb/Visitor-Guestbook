@@ -22,3 +22,46 @@ app.listen(PORT, () => {
 app.get("/", (request, response) => {
   response.json({ message: "this is root route" });
 });
+
+app.get("/user", async (request, response) => {
+  const result = await db.query(
+    `
+    SELECT * FROM visitors 
+  `
+  );
+  response.json(result.rows);
+});
+
+app.post("/user", async (request, response) => {
+  const { name, location, date, message } = request.body;
+  try {
+    await db.query(
+      `INSERT into visitors (name, location, date, message) VALUES ($1, $2, $3, $4)`,
+      [name, location, date, message]
+    );
+    response.status(200).json({ success: true });
+  } catch (error) {
+    console.error("No data is getting inserted", error);
+    response.status(500).json({ success: false });
+  }
+});
+
+// app.get("/favouritecars", async (request, response) => {
+//   const result = await db.query(
+//     `
+//       SELECT * FROM Favourite_Cars WHERE Rating = $1
+//       `,
+//     [10]
+//   );
+//   response.json(result.rows);
+// });
+
+// app.get("/favourcars", async (request, response) => {
+//   const result = await db.query(
+//     `
+//       SELECT * FROM Favourite_Cars WHERE Rating = $1 AND Brand = $2
+//       `,
+//     [10, "Ford"]
+//   );
+//   response.json(result.rows);
+// });

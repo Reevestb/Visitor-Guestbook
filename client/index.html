@@ -8,21 +8,37 @@
   </head>
   <body>
     <body>
+      <header>
+        <h1 class="title">Visitor Guestbook 📖</h1>
+      </header>
+      <main>
       <div id="signIn">
+        <fieldset>
         <form id="visitorSign">
-          <label for="Name">Name: </label>
-          <input type="text" name="Name" id="Name" required />
-          <label for="Location">Location: </label>
-          <input type="text" name="Location" id="Location" required />
-          <label for="dateVisiting">Date Visiting: </label>
-          <input type="text" name="dateVisiting" id="dateVisiting" required />
-          <label for="Messages">Messages: </label>
-          <input type="text" name="Messages" id="Messages" required />
-          <input type="submit" value="submit" />
+          <label for="Name">Name </label> <br>
+          <input type="text" name="Name" id="Name" placeholder="Your Name Here" required />
+          <br>
+          <label for="Location">Location </label> <br>
+          <input type="text" name="Location" id="Location" placeholder="Your Location Here" />
+          <br>
+          <label for="dateVisiting">Date Visiting </label><br>
+          <input type="text" name="dateVisiting" id="dateVisiting" placeholder="The date you Visited" required />
+          <br>
+          <label for="Messages">Message </label><br>
+          <textarea name="Messages" id="Messages" placeholder="Leave Your Message Here" required></textarea>
+
+          <br>
+          <button type="submit">Submit</button>
         </form>
-        <div id=""></div>
-        <div id="leftMessages"></div>
+      </fieldset>
+      <div id="message-container">
+      <ul id="leftMessages"></ul>
+    </div>
       </div>
+    </main>
+    <footer>
+      <p class="copyright">©TB.Reeves</p>
+    </footer>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

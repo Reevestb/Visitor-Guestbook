@@ -1,12 +1,12 @@
 import { db } from "./server.js";
 
-db.query(`CREATE TABLE IF NOT EXISTS Visitor_Sign_In (
+db.query(`CREATE TABLE IF NOT EXISTS visitors (
     id SERIAL PRIMARY KEY,
-    Name VARCHAR(255),
-    Location VARCHAR(255),
-    Date_Visiting DATE,
-    Messages TEXT
+    name VARCHAR(255),
+    location VARCHAR(255),
+    date VARCHAR(10),
+    message TEXT
 )`);
-
-db.query(`INSERT INTO Visitor_Sign_In (Name, Location, Date_Visiting)
-    VALUES ('Joe Minaj', 'Norwich','2024-06-14')`);
+db.query(`INSERT INTO visitors (name, location, date, message)
+    VALUES ('Joe', 'Minaj', '01-02-2024', 'Best thing ive been to')
+    `);

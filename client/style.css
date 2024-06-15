@@ -1,0 +1,65 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+@media (max-width: 500px) {
+  header {
+    display: flex;
+    position: relative;
+    justify-content: center;
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  main {
+    display: flex;
+    position: relative;
+  }
+  .title {
+    display: flex;
+    position: absolute;
+    font-size: 45px;
+  }
+
+  #signIn {
+    display: flex;
+    position: absolute;
+    justify-content: flex-start;
+    top: 10vh;
+  }
+
+  #visitorSign {
+    width: 250px;
+    height: 400px;
+    flex-direction: column;
+    font-size: 20px;
+  }
+
+  #leftMessages {
+    display: flex;
+    position: absolute;
+    left: 1px;
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+    font-size: 25px;
+    top: 50vh;
+    width: 400px;
+    gap: 10px;
+  }
+
+  input {
+    padding: 10px;
+  }
+
+  textarea {
+    padding: 30px;
+  }
+
+  .copyright {
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    display: flex;
+    justify-content: center;
+  }
+}
