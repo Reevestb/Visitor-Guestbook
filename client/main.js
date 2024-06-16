@@ -3,7 +3,9 @@
 const form = document.getElementById("visitorSign");
 
 async function fetchAndRenderVisitorForm() {
-  const response = await fetch("http://localhost:7430/user");
+  const response = await fetch(
+    "https://visitor-guestbook-7n2o.onrender.com/user"
+  );
   const leftMessages = await response.json();
   console.log(leftMessages);
   const messageDiv = document.getElementById("leftMessages");
@@ -25,13 +27,16 @@ async function submitButton(event) {
   const formValues = Object.fromEntries(formData);
 
   try {
-    const response = await fetch("http://localhost:7430/user", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formValues),
-    });
+    const response = await fetch(
+      "https://visitor-guestbook-7n2o.onrender.com/user",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formValues),
+      }
+    );
 
     const data = await response.json();
 
