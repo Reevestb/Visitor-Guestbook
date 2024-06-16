@@ -7,33 +7,53 @@
     <title>Visitor Guestbook</title>
   </head>
   <body>
-    <body>
-      <header>
-        <h1 class="title">Visitor Guestbook 📖</h1>
-      </header>
-      <main>
+    <header>
+      <h1 class="title">Visitor Guestbook 📖</h1>
+    </header>
+    <main>
       <div id="signIn">
-        <fieldset>
         <form id="visitorSign">
-          <label for="Name">Name </label> <br>
-          <input type="text" name="Name" id="Name" placeholder="Your Name Here" required />
-          <br>
-          <label for="Location">Location </label> <br>
-          <input type="text" name="Location" id="Location" placeholder="Your Location Here" />
-          <br>
-          <label for="dateVisiting">Date Visiting </label><br>
-          <input type="text" name="dateVisiting" id="dateVisiting" placeholder="The date you Visited" required />
-          <br>
-          <label for="Messages">Message </label><br>
-          <textarea name="Messages" id="Messages" placeholder="Leave Your Message Here" required></textarea>
+          <h1 class="formh1">Guest Message Form</h1>
+          <label for="name">Name </label>
+          <input
+            type="text"
+            name="name"
+            id="Name"
+            placeholder="Your Name Here"
+            required
+          />
 
-          <br>
-          <button type="submit">Submit</button>
+          <label for="Location">Location </label>
+          <input
+            type="text"
+            name="location"
+            id="location"
+            placeholder="Your Location Here"
+          />
+
+          <label for="dateVisiting">Date Visiting </label>
+          <input
+            type="text"
+            name="date"
+            id="date"
+            placeholder="The date you Visited"
+            required
+          />
+
+          <label for="Messages">Message </label>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Leave Your Message Here"
+            required
+          ></textarea>
+
+          <button type="submit" id="btn" class="btn">Submit</button>
         </form>
-      </fieldset>
-      <div id="message-container">
-      <ul id="leftMessages"></ul>
-    </div>
+
+        <div id="message-container">
+          <ul id="leftMessages"></ul>
+        </div>
       </div>
     </main>
     <footer>

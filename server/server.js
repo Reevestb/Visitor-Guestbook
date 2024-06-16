@@ -45,23 +45,3 @@ app.post("/user", async (request, response) => {
     response.status(500).json({ success: false });
   }
 });
-
-// app.get("/favouritecars", async (request, response) => {
-//   const result = await db.query(
-//     `
-//       SELECT * FROM Favourite_Cars WHERE Rating = $1
-//       `,
-//     [10]
-//   );
-//   response.json(result.rows);
-// });
-
-// app.get("/favourcars", async (request, response) => {
-//   const result = await db.query(
-//     `
-//       SELECT * FROM Favourite_Cars WHERE Rating = $1 AND Brand = $2
-//       `,
-//     [10, "Ford"]
-//   );
-//   response.json(result.rows);
-// });

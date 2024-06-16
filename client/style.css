@@ -1,6 +1,8 @@
 @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
-
-@media (max-width: 500px) {
+* {
+  background-color: ivory;
+}
+@media (max-width: 2560px) {
   header {
     display: flex;
     position: relative;
@@ -15,11 +17,116 @@
   main {
     display: flex;
     position: relative;
+    height: 100vh;
+    width: auto;
   }
   .title {
     display: flex;
     position: absolute;
     font-size: 45px;
+    color: black;
+    z-index: 1;
+  }
+
+  #signIn {
+    display: flex;
+    position: absolute;
+    justify-content: flex-start;
+    top: 15vh;
+  }
+
+  #visitorSign {
+    width: 500px;
+    height: 450px;
+    flex-direction: column;
+    left: 6vw;
+    display: flex;
+    position: relative;
+    border: solid 1px black;
+    gap: 5px;
+    background-color: white;
+  }
+
+  .formh1 {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    text-decoration: underline solid 1px black;
+    background-color: white;
+  }
+
+  label {
+    font-size: 20px;
+    background-color: white;
+  }
+
+  input {
+    padding: 10px;
+    background-color: white;
+  }
+
+  textarea {
+    padding: 30px;
+    background-color: white;
+  }
+
+  button {
+    height: 40px;
+    background-color: lightgray;
+  }
+
+  #leftMessages {
+    display: flex;
+    position: absolute;
+    left: 60vw;
+    justify-content: flex-end;
+    flex-direction: column-reverse;
+    font-size: 20px;
+    width: 450px;
+    height: 452px;
+    gap: 10px;
+    border: solid 1px black;
+    overflow: scroll;
+    background-color: white;
+  }
+  #message-container {
+    background-color: white;
+  }
+
+  #inputMessages {
+    background-color: white;
+    color: black;
+  }
+
+  .copyright {
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 450px) {
+  header {
+    display: flex;
+    position: relative;
+    justify-content: center;
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  main {
+    display: flex;
+    position: relative;
+    height: 100vh;
+  }
+  .title {
+    display: flex;
+    position: absolute;
+    font-size: 37px;
   }
 
   #signIn {
@@ -36,16 +143,8 @@
     font-size: 20px;
   }
 
-  #leftMessages {
-    display: flex;
-    position: absolute;
-    left: 1px;
-    justify-content: flex-start;
-    flex-direction: column-reverse;
-    font-size: 25px;
-    top: 50vh;
-    width: 400px;
-    gap: 10px;
+  label {
+    font-size: 15px;
   }
 
   input {
@@ -54,6 +153,25 @@
 
   textarea {
     padding: 30px;
+  }
+
+  #message-container {
+    overflow: scroll;
+  }
+
+  #leftMessages {
+    display: flex;
+    position: absolute;
+    left: 1px;
+    justify-content: flex-end;
+    flex-direction: column-reverse;
+    font-size: 20px;
+    top: 50vh;
+    width: 300px;
+    max-height: 250px;
+    gap: 10px;
+    border: solid 1px black;
+    overflow: scroll;
   }
 
   .copyright {

@@ -11,7 +11,8 @@ async function fetchAndRenderVisitorForm() {
 
   leftMessages.forEach((msg) => {
     const userMessagesDiv = document.createElement("div");
-    userMessagesDiv.innerHTML = `name ${msg.name}, location ${msg.location}, date ${msg.date}, message ${msg.message}</p>`;
+    userMessagesDiv.id = "inputMessages";
+    userMessagesDiv.innerHTML = `Name: ${msg.name} <br> Date: ${msg.date}<br> Message: ${msg.message}</p>`;
     messageDiv.appendChild(userMessagesDiv);
   });
 }
@@ -27,7 +28,7 @@ async function submitButton(event) {
     const response = await fetch("http://localhost:7430/user", {
       method: "POST",
       headers: {
-        "content-type": "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(formValues),
     });
@@ -37,6 +38,7 @@ async function submitButton(event) {
     if (data.success) {
       console.log("DATA IS SAVED - ALL IS WELL");
       fetchAndRenderVisitorForm();
+      // console.log(formValues);
     } else {
       console.log("NOOO IT DIDN'T WORK!!!!!");
     }

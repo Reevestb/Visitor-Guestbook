@@ -8,5 +8,5 @@ db.query(`CREATE TABLE IF NOT EXISTS visitors (
     message TEXT
 )`);
 db.query(`INSERT INTO visitors (name, location, date, message)
-    VALUES ('Joe', 'Minaj', '01-02-2024', 'Best thing ive been to')
+    VALUES ('Joe Minaj', 'Norwich', '01-02-2024', 'Best thing ive been to')
     `);
