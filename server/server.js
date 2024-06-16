@@ -45,3 +45,17 @@ app.post("/user", async (request, response) => {
     response.status(500).json({ success: false });
   }
 });
+
+// app.delete("/user", async (request, response) => {
+//   const { name, location, date, message } = request.body;
+//   try {
+//     await db.query(
+//       `DELETE FROM visitors WHERE (name, location, date, message) VALUES ($1, $2, $3, $4)`,
+//       [name, location, date, message]
+//     );
+//     response.status(200).json({ success: true });
+//   } catch (error) {
+//     console.error("data is still there", error);
+//     response.status(500).json({ success: false });
+//   }
+// });

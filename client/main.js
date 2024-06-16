@@ -14,9 +14,14 @@ async function fetchAndRenderVisitorForm() {
   leftMessages.forEach((msg) => {
     const userMessagesDiv = document.createElement("div");
     userMessagesDiv.id = "inputMessages";
-    userMessagesDiv.innerHTML = `Name: ${msg.name} <br> Date: ${msg.date}<br> Message: ${msg.message}</p>`;
+    userMessagesDiv.innerHTML = `Name: ${msg.name} <br> Date: ${msg.date}<br> Message: ${msg.message} <br> <button class="deleteBtn">❌Remove❌</button></p>`;
     messageDiv.appendChild(userMessagesDiv);
   });
+  function updateScroll() {
+    let element = document.getElementById("leftMessages");
+    element.scrollTop = element.scrollHeight;
+  }
+  updateScroll();
 }
 fetchAndRenderVisitorForm();
 
@@ -43,6 +48,7 @@ async function submitButton(event) {
     if (data.success) {
       console.log("DATA IS SAVED - ALL IS WELL");
       fetchAndRenderVisitorForm();
+      form.reset();
       // console.log(formValues);
     } else {
       console.log("NOOO IT DIDN'T WORK!!!!!");
