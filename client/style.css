@@ -23,9 +23,11 @@
   .title {
     display: flex;
     position: absolute;
-    font-size: 45px;
+    font-size: 55px;
     color: black;
     z-index: 1;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    text-decoration: underline 2px solid black;
   }
 
   #signIn {
@@ -37,7 +39,7 @@
 
   #visitorSign {
     width: 500px;
-    height: 450px;
+    height: 480px;
     flex-direction: column;
     left: 6vw;
     display: flex;
@@ -83,14 +85,24 @@
     flex-direction: column-reverse;
     font-size: 20px;
     width: 450px;
-    height: 452px;
+    height: 450px;
     gap: 10px;
     border: solid 1px black;
     overflow: scroll;
     background-color: white;
+    top: 35px;
   }
   #message-container {
-    background-color: white;
+    display: flex;
+    position: absolute;
+    left: 60vw;
+    width: 450px;
+    justify-content: center;
+  }
+
+  .guestmsg {
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   }
 
   #inputMessages {
@@ -105,6 +117,8 @@
     justify-content: center;
   }
 }
+
+/* FOR PHONES */
 
 @media (max-width: 450px) {
   header {
@@ -126,7 +140,7 @@
   .title {
     display: flex;
     position: absolute;
-    font-size: 37px;
+    font-size: 25px;
   }
 
   #signIn {
@@ -137,8 +151,8 @@
   }
 
   #visitorSign {
-    width: 250px;
-    height: 400px;
+    width: 280px;
+    height: 350px;
     flex-direction: column;
     font-size: 20px;
   }
@@ -148,34 +162,46 @@
   }
 
   input {
-    padding: 10px;
+    padding: 5px;
   }
 
   textarea {
-    padding: 30px;
+    padding: 15px;
   }
 
   #message-container {
-    overflow: scroll;
+    display: flex;
+    position: absolute;
+    left: 1px;
+    width: 300px;
+    justify-content: center;
+    top: 50vh;
   }
 
   #leftMessages {
     display: flex;
     position: absolute;
-    left: 1px;
+    left: 10px;
     justify-content: flex-end;
     flex-direction: column-reverse;
     font-size: 20px;
-    top: 50vh;
+    top: 55vh;
     width: 300px;
     max-height: 250px;
     gap: 10px;
     border: solid 1px black;
     overflow: scroll;
+    scroll-behavior: smooth;
+    background-color: white;
+  }
+
+  #inputMessages {
+    background-color: white;
+    color: black;
   }
 
   .copyright {
-    font-size: 20px;
+    font-size: 10px;
     font-family: "Times New Roman", Times, serif;
     display: flex;
     justify-content: center;
