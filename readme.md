@@ -32,3 +32,10 @@
 What went really well and what could have gone better?
 Detailing useful external sources that helped you complete the assignment (e.g Youtube tutorials).
 Describing errors or bugs you encountered while completing your assignment.
+
+# My Reflection
+
+I believe i met all basic requirements for this assignment, I have enjoyed this assignment alot more than some of the others. I wasnt able to achieve the stretch goals, I did try the delete button but it kept messing my form up or stopping my database from showing on my page. I would really like to be shown how to do this just so I can understand it. I would have attempted the like button but i just felt it wouldnt have been aesthetically pleasing to my form.
+Although things went better this time for me I did have a problem with post but I found this wasn't working mainly due to typo's, which has been the cause for most of my minor issues when they have appeared.
+One thing i struggled with was as a new message was posted it wouldn't automaticaly scroll to where the new message was, after some googling i found and implemented a solution with a coupele trial and errors along the way.
+I think my styling could have been alot better but im struggling with whats the best way to use media queries, but I will keep researching this for the future.
