@@ -47,6 +47,7 @@
     border: solid 1px black;
     gap: 5px;
     background-color: white;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   }
 
   .formh1 {
@@ -77,41 +78,55 @@
     background-color: lightgray;
   }
 
+  #userMsgBox {
+    display: flex;
+    position: absolute;
+    left: 58vw;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    width: 450px;
+    height: 450px;
+    border: solid 1px black;
+    background-color: white;
+    top: 18vh;
+    overflow-y: scroll;
+  }
+
   #leftMessages {
     display: flex;
     position: absolute;
-    left: 60vw;
-    justify-content: flex-end;
     flex-direction: column-reverse;
     font-size: 20px;
     width: 450px;
     height: 450px;
     gap: 10px;
-    border: solid 1px black;
-    overflow: scroll;
     background-color: white;
-    top: 35px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
   }
+
+  #inputMessages {
+    height: 100vh;
+    background-color: white;
+    color: black;
+  }
+
   #message-container {
     display: flex;
     position: absolute;
-    left: 60vw;
+    left: 58vw;
     width: 450px;
+    top: 13vh;
     justify-content: center;
   }
 
   .guestmsg {
     font-size: 30px;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  }
-
-  #inputMessages {
-    background-color: white;
-    color: black;
+    text-decoration: underline solid 1px black;
   }
 
   .copyright {
-    font-size: 20px;
+    font-size: 15px;
     font-family: "Times New Roman", Times, serif;
     display: flex;
     justify-content: center;
@@ -175,24 +190,41 @@
     left: 1px;
     width: 300px;
     justify-content: center;
-    top: 50vh;
+    top: 57vh;
+  }
+
+  .guestmsg {
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    text-decoration: underline solid 1px black;
+  }
+
+  #userMsgBox {
+    display: flex;
+    position: absolute;
+    left: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    width: 300px;
+    height: 320px;
+    border: solid 1px black;
+    background-color: white;
+    top: 60vh;
+    overflow-y: scroll;
+    overflow-x: none;
   }
 
   #leftMessages {
     display: flex;
     position: absolute;
-    left: 10px;
-    justify-content: flex-end;
     flex-direction: column-reverse;
     font-size: 20px;
-    top: 55vh;
     width: 300px;
-    max-height: 250px;
+    height: 320px;
     gap: 10px;
-    border: solid 1px black;
-    overflow: scroll;
-    scroll-behavior: smooth;
     background-color: white;
+    overflow-y: scroll;
+    overflow-x: none;
+    scroll-behavior: smooth;
   }
 
   #inputMessages {
